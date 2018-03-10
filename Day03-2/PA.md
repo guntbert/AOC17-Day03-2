@@ -27,4 +27,5 @@ Your puzzle input is still 361527.
   - koord müssen dauerhaft fix und rekonstruierbar sein
   - also fang ich mit tier/index nix an
   - 2dim grid (array?), aber wie kann ich neg Koord abbilden?
+  - Idee: https://stackoverflow.com/questions/11837139/implementation-of-array-with-negative-indices
   
