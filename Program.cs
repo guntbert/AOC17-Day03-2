@@ -7,8 +7,8 @@ namespace Day03_2a
     {
         static void Main(string[] args)
         {
-            Dictionary<Point,int> snake=new Dictionary<Point, int>();
-            snake.Add(new Point{X=0,Y=0},0);
+            Dictionary<Point, int> Tiles = new Dictionary<Point, int>();
+            Tiles.Add(new Point { X = 0, Y = 0 }, 0);
 
 
         }
