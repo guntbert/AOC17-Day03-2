@@ -8,7 +8,11 @@ namespace Day03_2a
         static void Main(string[] args)
         {
             Dictionary<Point, int> Tiles = new Dictionary<Point, int>();
-            Tiles.Add(new Point { X = 0, Y = 0 }, 0);
+            // the active element
+            Head activeSpot = new Head() { Coords = new Point(0, 0), Heading = Direction.East };
+            Tiles.Add(activeSpot.Coords, 0);
+
+
 
 
         }
