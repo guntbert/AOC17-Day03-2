@@ -4,5 +4,6 @@ namespace Day03_2a
     {
         public Point Coords { get; set; }
         public int Value { get; set; }
+        public Direction Heading {get;set;}
     }
 }
