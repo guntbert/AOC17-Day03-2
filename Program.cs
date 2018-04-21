@@ -29,10 +29,36 @@ namespace Day03_2a
     }
     class Environment
     {
-        bool isPlaceOnTheLeftEmpy(Dictionary<Point, int> currentPattern, Point currentLocation)
+        bool isPlaceOnTheLeftEmpy(Dictionary<Point, int> currentPattern, Head currentItem)
         {
-            Point checkThis = new Point { X = currentLocation.X - 1, Y = currentLocation.Y };
-            return currentPattern.ContainsKey(checkThis);
+            Point locationToCheck = new Point();
+            switch (currentItem.Heading)
+            {
+                case Direction.East:
+                    // left is north
+                    locationToCheck.X = currentItem.Coords.X;
+                    locationToCheck.Y = currentItem.Coords.Y - 1;
+                    break;
+                case Direction.North:
+                    //left is west
+                    locationToCheck.X = currentItem.Coords.X-1;
+                    locationToCheck.Y = currentItem.Coords.Y ;
+                    break;
+                case Direction.West:
+                    //left is south
+                    locationToCheck.X = currentItem.Coords.X;
+                    locationToCheck.Y = currentItem.Coords.Y + 1;
+                    break;
+                case Direction.South:
+                    //left is east
+                    locationToCheck.X = currentItem.Coords.X+1;
+                    locationToCheck.Y = currentItem.Coords.Y ;
+                    break;
+
+                default:
+                throw new ArgumentException();
+            }
+            return currentPattern.ContainsKey(locationToCheck);
 
         }
 
